@@ -1,0 +1,249 @@
+/* 21961045 박수현 */
+@charset "utf-8";
+html, body {
+    height: 100%;
+    overflow-y: hidden
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+#card1_pop {
+    position : fixed;
+    width: 1600px;
+    height:800px;
+    left: 50%;
+    top: 90px;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    border: 1px solid #3d1a00;
+    background-color: rgba( 0, 0, 0, 0.92 );
+    visibility: hidden;
+}
+
+#card1_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card1_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 50px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card1_pop .movie_wrap{
+  position: absolute;
+  width:800px;
+  height: 800px;
+  top:0;
+  left:110px;
+}
+
+#card1_pop .movie_wrap #season1 {
+  position : absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 100;
+}
+
+#card1_pop .movie_wrap .play{
+  position : absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+}
+
+#card1_pop .movie_wrap .stop {
+  position : absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+    opacity : 0.1;
+    display: none;
+    transition  : all .3s;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#card1_pop  .movie_wrap .stop:hover {
+    opacity : 1;
+}
+
+#card1_pop .title {
+  font-family: 'Lora', serif;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 190px;
+  opacity: 80%;
+  margin-left: 980px;
+  line-height: 37px;
+}
+
+#card1_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  top: 240px;
+  margin-left: 980px;
+  line-height: 37px;
+}
+
+#card1_pop ul {
+  position: absolute;
+  top: 390px;
+  right: 160px;
+  letter-spacing: 0;
+}
+#card1_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card1_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card1_pop ul span {
+    line-height: 22px;
+}
+
+#card2_pop {
+  position : fixed;
+  width: 1600px;
+  height:800px;
+  left: 50%;
+  top: 90px;
+  transform: translate(-50%, 0);
+  z-index: 200;
+  transition: 1s;
+  opacity : 0;
+  border: 1px solid #3d1a00;
+  background-color: rgba( 0, 0, 0, 0.92 );
+  visibility: hidden;
+}
+
+#card2_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card2_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 50px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card2_pop .movie_wrap{
+  position: absolute;
+  width:800px;
+  height: 800px;
+  top:0;
+  left:110px;
+}
+
+#card2_pop .movie_wrap #season2 {
+  position : absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 100;
+}
+
+#card2_pop .movie_wrap .play{
+  position : absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+}
+
+#card2_pop .movie_wrap .stop {
+  position : absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+    opacity : 0.1;
+    display: none;
+    transition  : all .3s;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#card2_pop  .movie_wrap .stop:hover {
+    opacity : 1;
+}
+
+#card2_pop .title {
+  font-family: 'Lora', serif;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 190px;
+  opacity: 80%;
+  margin-left: 980px;
+  line-height: 37px;
+}
+
+#card2_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  top: 240px;
+  margin-left: 980px;
+  line-height: 37px;
+}
+
+#card2_pop ul {
+  position: absolute;
+  top: 390px;
+  right: 160px;
+  letter-spacing: 0;
+}
+#card2_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card2_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card2_pop ul span {
+    line-height: 22px;
+}

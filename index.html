@@ -1,0 +1,190 @@
+<!DOCTYPE html><!--21961045 박수현-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <title></title>
+    <style>
+      body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      video {
+      	position : fixed;
+      	top : 0;
+      	left : 0;
+      	min-width : 100 %;
+      	min-height : 100 %;
+      	width : 100%;
+      	height : auto;
+      	z-index : -1;
+      }
+      li{
+        list-style-type: none;
+      }
+      #header {
+          width: 100%;
+          height: 70px;
+
+          position: fixed;
+          z-index: 100;
+      }
+
+      #header .logo {
+          float: left;
+          /* width: 80px;
+          height: 41px; */
+          position: absolute;
+          left: 50px;
+          top: 20px;
+          cursor: pointer;
+          z-index: 999;
+      }
+
+          #topMenu {
+              height: 30px;
+              width: 100%;       /* [변경] 하위 메뉴와 동일하게 맞춤 */
+              position: relative;
+              margin-bottom: 20px;
+              text-align: center;
+              top: 30px;
+              float: left;
+              z-index: 999;
+              }
+
+          #topMenu ul {           /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+            list-style-type: none;
+            margin-right: 20px;
+            padding: 0px;
+          }
+
+          #topMenu ul li {            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+              font-family: 'Gothic A1', sans-serif;
+              color: white;
+              float: right;
+              margin-right: 30px;
+              line-height: 30px;
+              vertical-align: middle;
+              text-align: left;
+              -position: relative;
+          }
+
+          .menuLink, .submenuLink {           /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+              text-decoration:none;
+              display: block;
+              width: 100%;
+              font-family: 'Gothic A1', sans-serif;
+              font-size: 15px;
+              font-weight: 300;
+          }
+          .menuLink {     /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+
+          }
+
+
+          .topMenuLi:hover .menuLink {    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+              color:#DBA901;
+          }
+          .longLink {     /* 좀 더 긴 메뉴 스타일 설정 */
+              width: 100%;
+          }
+
+
+
+      .content {
+        position: relative;
+        top: 0;
+        width:100%;
+
+      }
+
+
+    .sns  {
+        bottom:35px;
+        left: 50px;
+        position: absolute;
+        float: left;
+    }
+
+    .sns > li {
+      opacity: 80%;
+      width: 20px;
+      height: 20px;
+      /* background-color: white; */
+      float: left;
+      margin-right: 15px;
+    }
+
+
+
+
+  .sns > li:last-child {
+        margin-right: 0;
+    }
+
+    .official {
+      position: absolute;
+      right: 70px;
+      bottom:50px;
+      width: 200px;
+      height: 40px;
+    }
+
+
+      </style>
+  </head>
+  <body>
+
+
+    <a name='navigation'>
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="img/main/logo.png" alt="메인"></a></h1>
+
+        <nav id="topMenu">
+          <ul>
+            <li class='topMenuLi'><a class="menuLink" href="video.html">영상</a>
+
+            </li>
+              <li class='topMenuLi'><a class="menuLink" href="gallery1.html">갤러리</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="cast.html">등장인물</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="season.html">시즌</a>
+
+
+          </ul>
+        </nav>
+
+
+
+        <ul class="bottom_list"></ul>
+    </header>
+    <div class="content">
+      <video src="Penthouse2.mp4" muted autoplay loop  width="100%""> </video>
+    </div>
+
+      <ul class="sns clearfix">
+          <li><a href="https://tv.naver.com/sbs.penthouse/playlists" target="_blank"><img src="./img/main/naver.png" alt="네이버tv"></a></li>
+          <li><a href="https://tv.kakao.com/channel/3663938/video" target="_blank"><img src="./img/main/kakao.png" alt="카카오TV"></a></li>
+          <li><a href="https://twitter.com/SBSNOW" target="_blank"><img src="./img/main/twitter.png" alt="트위터"></a></li>
+          <li><a href="https://www.instagram.com/sbsnow_insta/" target="_blank"><img src="./img/main/insta.png" alt="인스타"></a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLjbvqgbN_-T5vMG1I_RDCPtZz7xSGZEx8" target="_blank"><img src="./img/main/youtube.png" alt="유튜브"></a></li>
+      </ul>
+
+      <div class="official">
+        <a href="https://programs.sbs.co.kr/drama/penthouse/main" target="_blank"><img src="./img/main/official.png" alt="공홈바로가기"></a>
+      </div>
+  </body>
+</html>

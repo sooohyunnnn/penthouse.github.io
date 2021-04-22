@@ -1,0 +1,607 @@
+<!DOCTYPE html><!--21961045 박수현-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/cast.css"/>
+
+    <script src="./js/plugin/jquery-1.8.1.min.js"></script>
+    <script src="./js/cast.js"></script>
+    <title></title>
+    <style>
+      body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: url("./img/cast/bg.png")no-repeat;
+        background-size: cover;
+      }
+      li{
+        list-style-type: none;
+      }
+      #header {
+          width: 100%;
+          height: 70px;
+          position: fixed;
+          z-index: 100;
+      }
+
+      #header .logo {
+          float: left;
+          width: 70px;
+          height: 41px;
+          position: absolute;
+          left: 80px;
+          top: 20px;
+          cursor: pointer;
+          z-index: 999;
+      }
+
+          #topMenu {
+              height: 30px;
+              width: 100%;       /* [변경] 하위 메뉴와 동일하게 맞춤 */
+              position: relative;
+              margin-bottom: 20px;
+              text-align: center;
+              top: 30px;
+              float: left;
+              z-index: 999;
+              }
+
+          #topMenu ul {           /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+            list-style-type: none;
+            margin-right: 20px;
+            padding: 0px;
+          }
+
+          #topMenu ul li {            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+              font-family: 'Gothic A1', sans-serif;
+              color: white;
+              float: right;
+              margin-right: 30px;
+              line-height: 30px;
+              vertical-align: middle;
+              text-align: left;
+              -position: relative;
+          }
+
+          .menuLink, .submenuLink {           /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+              text-decoration:none;
+              display: block;
+              width: 100%;
+              font-family: 'Gothic A1', sans-serif;
+              font-size: 15px;
+              font-weight: 300;
+          }
+          .menuLink {     /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+
+          }
+
+
+          .topMenuLi:hover .menuLink {    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+              color:#DBA901;
+          }
+          .longLink {     /* 좀 더 긴 메뉴 스타일 설정 */
+              width: 100%;
+          }
+
+
+      h1 {
+        font-family: 'Lora', serif;
+        color: #E6E6E6;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      h2 {
+        font-family: 'Gothic A1', sans-serif;
+        color: #A4A4A4;
+        font-size: 14px;
+        font-weight: 200;
+        position: absolute;
+        top: 155px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      #btn li:hover {
+          transition: 0.7s;
+          opacity: 1;
+
+      }
+
+      #btn .btn1 {
+        position: absolute;
+        left: 850px;
+        bottom: 300px;
+        opacity: 0.5;
+      }
+      #btn .btn2 {
+        position: absolute;
+        left: 1030px;
+        top: 200px;
+        opacity: 0.5;
+      }
+      #btn .btn3 {
+        position: absolute;
+        left: 500px;
+        top: 350px;
+        opacity: 0.5;
+      }
+      #btn .btn4 {
+        position: absolute;
+        left: 520px;
+        top: 120px;
+        opacity: 0.5;
+      }
+      #btn .btn5 {
+        position: absolute;
+        left: 270px;
+        top: 200px;
+        opacity: 0.5;
+      }
+      #btn .btn6 {
+        position: absolute;
+        left: 1300px;
+        top: 150px;
+        opacity: 0.5;
+      }
+      #btn .btn7 {
+        position: absolute;
+        left: 1150px;
+        top: 400px;
+        opacity: 0.5;
+      }
+      #btn .btn8 {
+        position: absolute;
+        left: 180px;
+        top: 400px;
+        opacity: 0.5;
+      }
+
+      </style>
+  </head>
+  <body>
+    <!-- 팝업 -->
+
+    <!-- 팝업1 -->
+
+    <section id="card1_pop">
+      <div class="name1">심수련</div>
+      <div class="name2">이지아</div>
+      <div class="say">“죄를 짓고 아무 일 없다는 듯이 살면 안되는 거잖아”</div>
+
+      <p><b>주단태의 아내. 주석훈과 주석경 쌍둥이의 엄마. <br>
+        헤라팰리스 입주자 모두 인정하는,<br>
+        명실상부한 헤라클럽의 퀸!</b><br><br>
+
+        그런 그녀에게 완벽과 최고만을 추구하는 주단태와의 결혼생활은 <br>
+        숨 막힐 것 같은 답답함의 연속이었다.<br><br>
+
+        그를 진심으로 사랑하지 않았지만 두 아이를 위해 <br>
+        아내와 엄마의 역할을 다하고자 애썼다.<br>
+        본인의 행복을 포기한 채 펜트하우스에서 무미건조한 삶을 살아 온지 꽤 오래됐다.<br>
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>심수련</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1977년 5월 22일(46세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 영동대로 512 헤라팰리스 100층 펜트하우스</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>화가 → JAKOMO 대표</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/suryun.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+
+    <!-- 팝업2 -->
+    <section id="card2_pop">
+      <div class="name1">오윤희</div>
+      <div class="name2">유진</div>
+      <div class="say">“엄마 심장 반쪽을 팔아서라도 여기서 살게 해줄게”</div>
+
+      <p><b>배로나 엄마. 자격증 없는 부동산 컨설턴트.</b><br><br>
+      “내 딸만큼은 돈 때문에 설움 받지 않아야 하고, <br>
+      차별당하지 않아야 하고, 기죽어선 안 된다! <br>
+      그러려면, 돈이 있어야 한다."<br><br>
+
+      학창시절 전국에서 알아주는 실력파 소프라노였으나<br>
+      예상치 못한 사고로 성대에 치명적인 손상을 입어 성악을 포기했다.<br>
+      윤희의 삶이 꼬이기 시작한 것은 그때부터였다.<br><br>
+
+      딸 만큼은 돈에 허덕이며 살게 하진 않겠다는 마음으로 억척스럽게 살았다.<br>
+      윤희에게 로나는 삶의 모든 것이자 이유였다.<br>
+      가진 게 없어도 로나에겐 모든 걸 해주고 싶었다.
+
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>오윤희</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1978년 5월 7일(45세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 용산구 후암동 다세대주택 2층 <br>
+              → 서울특별시 성동구 성수동 보송마을 아파트 3동 501호 <br>
+              → 서울특별시 강남구 영동대로 512 헤라팰리스 4502호[3]</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>소프라노 성악가 → 부동산 컨설턴트 → JKING홀딩스 투자개발팀장 → 전업주부</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/ohyun.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+    <!-- 팝업3 -->
+    <section id="card3_pop">
+      <div class="name1">천서진</div>
+      <div class="name2">김소연</div>
+      <div class="say">“세상은 힘있는 사람의 얘기만 들어줘”</div>
+
+      <p><b>하윤철의 부인. 하은별의 엄마.<br>
+        타고난 금수저. 청아재단 실세. 유명 소프라노. <br>
+        “헤라클럽”의 여왕벌</b><br><br>
+
+        자신이 세상의 중심이어야 하는 여자. 원하는 것은 어떻게든 손에 넣는다.<br>
+        그것이 다른 사람의 꿈이든, 다른 여자의 남자든.<br>
+        스포트라이트는 항상 서진을 비추고 있었다.<br><br>
+
+        ‘한국 최고의 소프라노’, ‘청아재단 이사장 딸’, ‘넘사벽 엄친아’라는 <br>
+        타이틀은 늘 그녀를 주목받게 만들기 충분했다.<br><br>
+
+        남편인 윤철 또한 집안은 형편없었지만 차기 병원장을 노릴만큼 성실한 사람이었다.<br>
+        그를 VIP 전담 외과 과장 자리에 앉히기 위해 서진도 나름의 내조를 했다.<br><br>
+        모든 게 자리를 잘 잡고 있는 듯 보였다.
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>천서진</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1978년 3월 28일(45세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 영동대로 512 헤라팰리스 8501호</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>청아예술고등학교 예술부장 → 청아그룹 이사장</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/cheon.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+    <!-- 팝업4 -->
+    <section id="card4_pop">
+      <div class="name1">주단태</div>
+      <div class="name2">엄기준</div>
+      <div class="say">“가엾지 뭐야. 아무것도 몰랐다면 죽지 않았을 텐데”</div>
+
+      <p><b>심수련의 남편. 주석훈, 주석경의 아빠.<br>
+        제이킹 홀딩스 건축회사 대표. 부동산의 귀재.</b><br><br>
+
+        서울, 북경, 라스베거스, 인도네시아, 전 세계 곳곳에 그의 건축물이 있다.<br>
+        삼성동 최고층 주상복합 건물 헤라팰리스도 그의 작품!<br><br>
+
+        건축 뿐 아니라 부동산에도 천부적인 재능을 가진 그는 <br>
+        귀신같이 돈 냄새를 잘 맡아, 투자하는 부동산마다 돈을 쓸어 모았다.<br>
+        강남 노른자위 땅과 고층 건물 여럿을 소유하고 있다.<br><br>
+
+        자수성가한 인물인 만큼 강박증 심한 완벽주의자적 기질을 갖고 있다.<br>
+        한 치의 흐트러짐이나 구설도 용납하지 않는다. 늘 최고여야 하고, 완벽해야 한다.<br>
+        냉혈한의 피가 흘러 가족들을 거칠게 대하지만 <br>
+        남들에겐 완벽한 가정으로 보이고자 부단히 노력한다.
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>주단태</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1976년 8월 13일(47세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 영동대로 512 헤라팰리스 100층 펜트하우스</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>제이킹 홀딩스 건축회사 대표</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/judan.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+    <!-- 팝업5 -->
+    <section id="card5_pop">
+      <div class="name1">하윤철</div>
+      <div class="name2">윤종훈</div>
+      <div class="say">“후회는 늘 있는 거니까. 산다는게, 자신이 선택하지 않은 걸 감당하는 거라며”</div>
+
+      <p><b>천서진의 남편. 하은별의 아빠.<br>
+        대형 종합병원 청아의료원 VIP 전담 외과과장. <br>
+        허리 디스크수술의 권위자.</b>
+
+        현실에 적당히 타협할 줄 아는 인물로 <br>
+        사람을 계급에 따라 나누어 대하는 처세술의 끝판왕. <br>
+        역시 남자는 돈과 권력을 쥐고 있어야 한다는 야망남.<br><br>
+
+        국내 수술 예약환자수 최다, 청아의료원 <br>
+        수익률200%를 일궈낸 장본인으로 유력한 차기 청아의료원 병원장이다.<br><br>
+
+        윤철도 본인의 성공에는 부인 천서진의 내조가 한 몫 했다 생각한다.<br>
+        인생의 파트너로서 만족스러운 아내였다. <br><br>
+
+        특히 두 사람의 목표가 같았다. ‘최고가 되는 것! ’
+
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>하윤철</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1978년 2월 3일(45세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 영동대로 512 헤라팰리스 8501호</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>청아의료원 VIP 전담 신경외과장</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/hayun.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+    <!-- 팝업6 -->
+    <section id="card6_pop">
+      <div class="name1">이규진</div>
+      <div class="name2">봉태규</div>
+      <div class="say">“하늘도 결국, 우리 부자 편 아니겠어요?”</div>
+
+      <p><b>고상아의 남편. 이민혁의 아빠. 빅토리 로펌 전문 이혼변호사.<br>
+        법조인 재벌가의 외아들로 허세뿐인 속빈 강정에 마마보이. 찌질의 끝판왕.</b><br><br>
+
+        법조계 집안의 3대 독자로 1남 2녀 중 막내다.<br>
+        어렸을 때부터 엄마가 시키는 대로 살아왔더니 <br>
+        어느 새 변호사가 되어 있었다.<br><br>
+
+        당연히 스스로 할줄아는 건 없고,결정장애에 <br>
+        모든 걸 누나나 엄마에게 컨펌 받아야 마음이 편한 마마보이다. <br>
+        게다가 생활비 대신 엄카를 건네는 찌질의 끝판왕.<br><br>
+
+      규진은 상아가 매일같이 엄마에게 볶여도 방패막이가 돼 줄 생각이 없다.<br>
+      손도 까딱 앉는 버릇으로 하나부터 열까지 상아에게 다 시키고,<br>
+      상아가 조금이라도 반기를 들면 쪼르르 누나나 엄마에게 얘기하느라 바쁘다.
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>이규진</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1978년 10월 19일(45세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 영동대로 512 헤라팰리스 55층</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>빅토리 로펌 이혼 전문 변호사</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/yigyu.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+    <!-- 팝업7 -->
+    <section id="card7_pop">
+      <div class="name1">고상아</div>
+      <div class="name2">윤주희</div>
+      <div class="say">“이제 자기도 스스로 하는 모습을 보여야지”</div>
+
+      <p><b>이규진의 아내. 이민혁의 엄마.<br>
+        아나운서 출신의 재벌가 며느리.<br>
+        남편과 아들 일이라면 어떤 희생이라도 감수하는 소문난 내조의 여왕</b><br><br>
+
+        교양 있는 척, 세상 행복한 척, 사랑받는 척 하지만, <br>
+        정작 반쪽짜리 결혼생활이다. 한때 촉망받던 아나운서에서 <br>
+        지금은 재벌가 며느리로, 남편 이규진을 내조하며 살아가고 있다.<br><br>
+
+        그녀의 결혼생활을 한마디로 창살 없는 감옥이었다.<br>
+        시댁식구들은 온갖 더럽고 구린 짓은 다하고 <br>
+        호사를 누리면서, 상아에게는 검소, 절제, 청렴을 강요한다. <br><br>
+
+        시어머니의 컨펌 없인 콩나물 100g도 살 수 없었다.<br>
+        남편의 월급을 단 한 번도 만져본 적 없었다.
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>고상아</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1979년생(44세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 영동대로 512 헤라팰리스 55층</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>SBC 아나운서 → 전업주부</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/gosang.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+    <!-- 팝업8 -->
+    <section id="card8_pop">
+      <div class="name1">강마리</div>
+      <div class="name2">신은경</div>
+      <div class="say">“죄를 짓고 아무 일 없다는 듯이 살면 안되는 거잖아”</div>
+
+      <p><b>유제니의 엄마. 유동필 부인.<br>
+        개처럼 벌어서 정승처럼 쓰자는 게 인생모토. 졸부.</b><br><br>
+
+        헤라팰리스에 거주하지만, 20년 경력의 손맛 좋은 세신사 <br>
+        개처럼 벌어서 정승처럼 쓰자는 게 인생모토. <br><br>
+
+        다혈질인 듯 보이지만 사실 알고 보면 <br>
+        엄청나게 계산적이고 냉철하다.<br>
+        예약이 줄을 서는 경력 20년의 세신사와,<br>
+        헤라 팰리스 졸부의 이중생활을 하고 있다.<br><br>
+
+        딸(유제니)의 일이라면 도둑질이라도 <br>
+        저지를 수 있는 여자다. <br>
+        제니는 나의 유일한 피붙이이자 공주니까.금쪽같은 내 새끼.
+        </p>
+
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>이름</strong>
+            <span>강마리</span>
+          </li>
+          <li>
+            <strong>출생</strong>
+            <span>1976년 1월 30일(47세)</span>
+          </li>
+          <li>
+            <strong>거주지</strong>
+            <span>서울특별시 강남구 삼정동 영동대로 512 헤라팰리스 4503호</span>
+          </li>
+          <li>
+            <strong>직업</strong>
+            <span>세신사</span>
+          </li>
+        </ul>
+
+        <div class="pic"><img src="./img/cast/kang.jpeg" width="550px" alt=""></div>
+        <div class="gosite"><a href="https://programs.sbs.co.kr/drama/penthouse/cast/66540" target="_blank"><img src="./img/cast/more.png" alt=""></img></a></div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <a name='navigation'>
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="./img/main/logo.png" alt="메인"></a></h1>
+
+        <nav id="topMenu">
+          <ul>
+            <li class='topMenuLi'><a class="menuLink" href="video.html">영상</a>
+
+            </li>
+              <li class='topMenuLi'><a class="menuLink" href="gallery1.html">갤러리</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="cast.html">등장인물</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="season.html">시즌</a>
+
+          </ul>
+        </nav>
+
+
+
+        <ul class="bottom_list"></ul>
+    </header>
+    <h1>Character</h1>
+    <h2>버튼을 클릭해보세요</h2>
+    <ul id="btn">
+      <li class="btn1"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn2"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn3"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn4"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn5"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn6"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn7"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+      <li class="btn8"><img src="./img/cast/plus_btn.png" width="200px" alt="더보기"></li>
+
+    </ul>
+
+  </body>
+</html>

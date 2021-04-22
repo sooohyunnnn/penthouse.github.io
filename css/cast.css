@@ -1,0 +1,948 @@
+/* 21961045 박수현 */
+@charset "utf-8";
+html, body {
+    height: 100%;
+    overflow-y: hidden
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+#card1_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card1_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card1_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card1_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card1_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 200px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card1_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 215px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card1_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 260px;
+  margin-left: 950px;
+}
+
+#card1_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 290px;
+  margin-left: 950px;
+  line-height: 25px;
+}
+
+#card1_pop ul {
+  position: absolute;
+  bottom: 160px;
+  right: 215px;
+  letter-spacing: 0;
+}
+#card1_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card1_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card1_pop ul span {
+    line-height: 22px;
+}
+
+#card1_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업2 */
+#card2_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card2_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card2_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card2_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card2_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 130px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card2_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 145px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card2_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 190px;
+  margin-left: 950px;
+}
+
+#card2_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 220px;
+  margin-left: 950px;
+  line-height: 25px;
+}
+
+#card2_pop ul {
+  position: absolute;
+  bottom: 140px;
+  right: 130px;
+  letter-spacing: 0;
+}
+#card2_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card2_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card2_pop ul span {
+    line-height: 22px;
+}
+
+#card2_pop .gosite {
+  width: 122px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업3 */
+#card3_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card3_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card3_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card3_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card3_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 130px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card3_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 145px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card3_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 190px;
+  margin-left: 950px;
+}
+
+#card3_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 220px;
+  margin-left: 950px;
+  line-height: 24px;
+}
+
+#card3_pop ul {
+  position: absolute;
+  bottom: 140px;
+  right: 280px;
+  letter-spacing: 0;
+}
+#card3_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card3_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card3_pop ul span {
+    line-height: 22px;
+}
+
+#card3_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업4 */
+#card4_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card4_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card4_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card4_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card4_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 150px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card4_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 165px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card4_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 210px;
+  margin-left: 950px;
+}
+
+#card4_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 240px;
+  margin-left: 950px;
+  line-height: 24px;
+}
+
+#card4_pop ul {
+  position: absolute;
+  bottom: 140px;
+  right: 215px;
+  letter-spacing: 0;
+}
+#card4_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card4_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card4_pop ul span {
+    line-height: 22px;
+}
+
+#card4_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업5 */
+#card5_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card5_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card5_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card5_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card5_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 150px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card5_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 165px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card5_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 210px;
+  margin-left: 950px;
+}
+
+#card5_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 240px;
+  margin-left: 950px;
+  line-height: 25px;
+}
+
+#card5_pop ul {
+  position: absolute;
+  bottom: 160px;
+  right: 285px;
+  letter-spacing: 0;
+}
+#card5_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card5_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card5_pop ul span {
+    line-height: 22px;
+}
+
+#card5_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업6 */
+#card6_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card6_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card6_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card6_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card6_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 130px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card6_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 145px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card6_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 190px;
+  margin-left: 950px;
+}
+
+#card6_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 220px;
+  margin-left: 950px;
+  line-height: 24px;
+}
+
+#card6_pop ul {
+  position: absolute;
+  bottom: 160px;
+  right: 295px;
+  letter-spacing: 0;
+}
+#card6_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card6_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card6_pop ul span {
+    line-height: 22px;
+}
+
+#card6_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업7 */
+#card7_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card7_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card7_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card7_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card7_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 130px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card7_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 145px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card7_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 190px;
+  margin-left: 950px;
+}
+
+#card7_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 220px;
+  margin-left: 950px;
+  line-height: 24px;
+}
+
+#card7_pop ul {
+  position: absolute;
+  bottom: 160px;
+  right: 295px;
+  letter-spacing: 0;
+}
+#card7_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card7_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card7_pop ul span {
+    line-height: 22px;
+}
+
+#card7_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}
+
+/* 팝업8 */
+#card8_pop {
+    position : fixed;
+    width: 100%;
+    height:100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 200;
+    transition: 1s;
+    opacity : 0;
+    background-color: rgba( 0, 0, 0, 0.8 );
+    visibility: hidden;
+}
+
+#card8_pop.on {
+    opacity : 1;
+    visibility: visible;
+}
+
+#card8_pop .previewCut_close {
+    position : absolute;
+    right: 70px;
+    top: 100px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#card8_pop .pic {
+  position : absolute;
+  border: 1px solid #a68d56;
+  left: 300px;
+  top: 75px;
+  z-index: 100;
+}
+
+#card8_pop .name1 {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 130px;
+  opacity: 80%;
+  margin-left: 950px;
+
+}
+
+#card8_pop .name2 {
+  font-family: 'Gothic A1', sans-serif;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 145px;
+  opacity: 80%;
+  margin-left: 1045px;
+
+}
+
+#card8_pop .say {
+  font-family: 'Gothic A1', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  position: absolute;
+  top: 190px;
+  margin-left: 950px;
+}
+
+#card8_pop p {
+  font-family: 'Gothic A1', sans-serif;
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 220px;
+  margin-left: 950px;
+  line-height: 25px;
+}
+
+#card8_pop ul {
+  position: absolute;
+  bottom: 160px;
+  right: 235px;
+  letter-spacing: 0;
+}
+#card8_pop ul li {
+    position: relative;
+    min-height: 22px;
+    padding: 6px 0 9px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    color: white;
+    opacity: 70%;
+}
+
+#card8_pop ul strong {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+}
+
+#card8_pop ul span {
+    line-height: 22px;
+}
+
+#card8_pop .gosite {
+  width: 152px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 950px;
+  z-index: 100;
+}

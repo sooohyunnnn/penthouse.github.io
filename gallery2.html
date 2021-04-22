@@ -1,0 +1,211 @@
+<!DOCTYPE html><!--21961045 박수현-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/plugin/reset.css"/>
+    <link rel="stylesheet" href="./css/plugin/slick.css">
+    <link rel="stylesheet" href="./css/gallery.css"/>
+
+    <script src="./js/plugin/jquery-1.8.1.min.js"></script>
+    <script src="./js/plugin/jquery.slides.js"></script>
+    <script src="./js/plugin/slick.min.js"></script>
+    <script src="./js/gallery.js"></script>
+    <title></title>
+    <style>
+      body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: url("./img/gallery/bg.png")no-repeat;
+        background-size: cover;
+      }
+      li{
+        list-style-type: none;
+      }
+      #header {
+          width: 100%;
+          height: 70px;
+
+          position: fixed;
+          z-index: 100;
+      }
+
+      #header .logo {
+          float: left;
+          width: 70px;
+          height: 41px;
+          position: absolute;
+          left: 80px;
+          top: 35px;
+          cursor: pointer;
+          z-index: 999;
+      }
+
+          #topMenu {
+              height: 30px;
+              width: 100%;       /* [변경] 하위 메뉴와 동일하게 맞춤 */
+              position: relative;
+              margin-bottom: 20px;
+              text-align: center;
+              top: 45px;
+              float: left;
+              z-index: 999;
+              }
+
+          #topMenu ul {           /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+            list-style-type: none;
+            margin-right: 20px;
+            padding: 0px;
+          }
+
+          #topMenu ul li {            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+              font-family: 'Gothic A1', sans-serif;
+              color: white;
+              float: right;
+              margin-right: 30px;
+              line-height: 30px;
+              vertical-align: middle;
+              text-align: left;
+              -position: relative;
+          }
+
+          .menuLink .submenuLink {           /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+              text-decoration:none;
+              display: block;
+              width: 100%;
+              font-family: 'Gothic A1', sans-serif;
+              font-size: 15px;
+              font-weight: 300;
+          }
+          .menuLink {     /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+
+          }
+
+
+          .topMenuLi:hover .menuLink {    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+              color:#DBA901;
+          }
+          .longLink {     /* 좀 더 긴 메뉴 스타일 설정 */
+              width: 100%;
+          }
+
+      h1 {
+        font-family: 'Lora', serif;
+        color: #E6E6E6;
+        font-size: 23px;
+        font-weight: 400;
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+
+      #category {
+        width: 113px;
+        /* background-color: white; */
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      #category li {
+        float: left;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+        margin-right: 40px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #757575;
+        cursor:
+      }
+
+      #category .list2{
+        margin-right: 0;
+      }
+
+      #category li a:link {
+        color: #d8d8d8;
+        text-decoration:none;
+      }
+      #category li a:visited {
+        color: #d8d8d8;
+      }
+      #category li a:hover {
+        color: #8e5300;
+      }
+      #category li a:active{
+        color: pink;
+      }
+
+
+
+      </style>
+  </head>
+  <body>
+
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="./img/main/logo.png" alt="메인"></a></h1>
+
+        <nav id="topMenu">
+          <ul>
+            <li class='topMenuLi'><a class="menuLink" href="video.html">영상</a>
+
+            </li>
+              <li class='topMenuLi'><a class="menuLink" href="gallery1.html">갤러리</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="cast.html">등장인물</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="season.html">시즌</a>
+
+
+          </ul>
+        </nav>
+
+    </header>
+
+    <h1>GALLERY</h1>
+
+
+
+    <ul class="gallery_slide clearfix">
+        <li class="pic1"><img src="./img/gallery/pic1.png" width="600px"></li>
+        <li class="pic2"><img src="./img/gallery/pic2.png" width="600px"></li>
+        <li class="pic3"><img src="./img/gallery/pic3.png" width="600px"></li>
+        <li class="pic4"><img src="./img/gallery/pic4.png" width="600px"></li>
+        <li class="pic5"><img src="./img/gallery/pic5.png" width="600px"></li>
+        <li class="pic6"><img src="./img/gallery/pic6.png" width="600px"></li>
+        <li class="pic7"><img src="./img/gallery/pic7.png" width="600px"></li>
+        <li class="pic8"><img src="./img/gallery/pic8.png" width="600px"></li>
+        <li class="pic6"><img src="./img/gallery/pic9.png" width="600px"></li>
+        <li class="pic7"><img src="./img/gallery/pic10.png" width="600px"></li>
+        <li class="pic8"><img src="./img/gallery/pic11.png" width="600px"></li>
+    </ul>
+
+    <div class="previous"><img src="./img/gallery/previous.png"></div>
+    <div class="next"><img src="./img/gallery/next.png"></div>
+
+    <ul id="category">
+      <li><a href="gallery1.html">시즌1</a></li>
+      <li class="list2"><a href="gallery2.html">시즌2</a></li>
+    </ul>
+
+
+
+
+  </body>
+</html>

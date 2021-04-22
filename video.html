@@ -1,0 +1,175 @@
+<!DOCTYPE html><!--21961045 박수현-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/plugin/reset.css"/>
+    <link rel="stylesheet" href="./css/video.css"/>
+
+
+    <script src="./js/plugin/jquery-1.8.1.min.js"></script>
+    <script src="./js/plugin/jquery.slides.js"></script>
+    <script src="./js/video.js"></script>
+    <title></title>
+    <style>
+      body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      li{
+        list-style-type: none;
+      }
+      #header {
+          width: 100%;
+          height: 70px;
+
+          position: fixed;
+          z-index: 100;
+      }
+
+      #header .logo {
+          float: left;
+          width: 70px;
+          height: 41px;
+          position: absolute;
+          left: 45px;
+          top: 35px;
+          cursor: pointer;
+          z-index: 999;
+      }
+
+          #topMenu {
+              height: 30px;
+              width: 100%;       /* [변경] 하위 메뉴와 동일하게 맞춤 */
+              position: relative;
+              margin-bottom: 20px;
+              text-align: center;
+              top:45px;
+              float: left;
+              z-index: 999;
+              }
+
+          #topMenu ul {           /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+            list-style-type: none;
+            margin-right: 20px;
+            padding: 0px;
+          }
+
+          #topMenu ul li {            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+              font-family: 'Gothic A1', sans-serif;
+              color: white;
+              float: right;
+              margin-right: 30px;
+              line-height: 30px;
+              vertical-align: middle;
+              text-align: left;
+              -position: relative;
+          }
+
+          .menuLink, .submenuLink {           /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+              text-decoration:none;
+              display: block;
+              width: 100%;
+              font-family: 'Gothic A1', sans-serif;
+              font-size: 15px;
+              font-weight: 300;
+          }
+          .menuLink {     /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+
+          }
+
+
+          .topMenuLi:hover .menuLink {    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+              color:#DBA901;
+          }
+          .longLink {     /* 좀 더 긴 메뉴 스타일 설정 */
+              width: 100%;
+          }
+
+      </style>
+  </head>
+  <body>
+
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="img/main/logo.png" alt="메인"></a></h1>
+
+        <nav id="topMenu">
+          <ul>
+            <li class='topMenuLi'><a class="menuLink" href="video.html">영상</a>
+
+            </li>
+              <li class='topMenuLi'><a class="menuLink" href="gallery1.html">갤러리</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="cast.html">등장인물</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="season.html">시즌</a>
+
+          </ul>
+        </nav>
+
+    </header>
+  <div id="movieImg">
+        <div class="movie_wrap">
+            <video id="video1" src="video3.mp4" width="100%" poster="./img/video/video1.png"></video>
+
+            <section id="info">
+              <h1>캐릭터 인터뷰</h1>
+              <h2>욕망으로 가득 찬 펜트하우스 입주자들의 인터뷰 <br>
+                '불륜? 사랑에 빠진 게 죄는 아니잖아요 (부캐Ver.)' </h2>
+
+            </section>
+
+            <div class="play"><img class="video1_btn" src="./img/season/play.png" alt="play"></div>
+            <div class="stop"><img class="video1_pause" src="./img/season/pause.png" alt="pause"></div>
+        </div>
+        <div class="movie_wrap">
+            <video id="video2" src="video1.mp4" width="100%"  poster="./img/video/video2.png"></video>
+
+            <section id="info">
+              <h1>[펜트하우스 시즌1] 티저</h1>
+              <h2>'언니는 살아있다','황후의 품격'김순옥 작가 2020년 신작 <br>
+                SBS 새월화드라마 '펜트하우스'</h2>
+
+            </section>
+
+            <div class="play"><img class="video2_btn" src="./img/season/play.png" alt="play"></div>
+            <div class="stop"><img class="video2_pause" src="./img/season/pause.png" alt="pause"></div>
+        </div>
+        <div class="movie_wrap">
+            <video id="video3" src="video2.mp4" width="100%" poster="./img/video/video3.png"></video>
+
+            <section id="info">
+              <h1>[펜트하우스 시즌2] 티저</h1>
+              <h2> '복수는 아직 시작되지 않았다' <br>
+              SBS 금토드라마 '펜트하우스' 시즌2 </h2>
+
+            </section>
+
+            <div class="play"><img class="video3_btn" src="./img/season/play.png" alt="play"></div>
+            <div class="stop"><img class="video3_pause" src="./img/season/pause.png" alt="pause"></div>
+        </div>
+    </div>
+
+    <div class="movieTitle"></div>
+
+</div>
+
+
+
+
+  </body>
+</html>

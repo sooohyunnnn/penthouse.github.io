@@ -1,0 +1,290 @@
+<!DOCTYPE html><!--21961045 박수현-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/season.css"/>
+
+    <script src="./js/plugin/jquery-1.8.1.min.js"></script>
+    <script src="./js/season.js"></script>
+    <title></title>
+    <style>
+      body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: url("./img/season/bg.png")no-repeat;
+        background-size: cover;
+      }
+      li{
+        list-style-type: none;
+      }
+      #header {
+          width: 100%;
+          height: 70px;
+          position: fixed;
+          z-index: 100;
+      }
+
+      #header .logo {
+          float: left;
+          width: 70px;
+          height: 41px;
+          position: absolute;
+          left: 80px;
+          top: 20px;
+          cursor: pointer;
+          z-index: 999;
+      }
+
+          #topMenu {
+              height: 30px;
+              width: 100%;       /* [변경] 하위 메뉴와 동일하게 맞춤 */
+              position: relative;
+              margin-bottom: 20px;
+              text-align: center;
+              top: 30px;
+              float: left;
+              z-index: 999;
+              }
+
+          #topMenu ul {           /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+            list-style-type: none;
+            margin-right: 20px;
+            padding: 0px;
+          }
+
+          #topMenu ul li {            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+              font-family: 'Gothic A1', sans-serif;
+              color: white;
+              float: right;
+              margin-right: 30px;
+              line-height: 30px;
+              vertical-align: middle;
+              text-align: left;
+              -position: relative;
+          }
+
+          .menuLink, .submenuLink {           /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+              text-decoration:none;
+              display: block;
+              width: 100%;
+              font-family: 'Gothic A1', sans-serif;
+              font-size: 15px;
+              font-weight: 300;
+          }
+          .menuLink {     /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+            font-family: 'Gothic A1', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+
+          }
+
+
+          .topMenuLi:hover .menuLink {    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+              color:#DBA901;
+          }
+          .longLink {     /* 좀 더 긴 메뉴 스타일 설정 */
+              width: 100%;
+          }
+
+
+      h1 {
+        font-family: 'Lora', serif;
+        color: #E6E6E6;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      h2 {
+        font-family: 'Gothic A1', sans-serif;
+        color: #A4A4A4;
+        font-size: 14px;
+        font-weight: 200;
+        position: absolute;
+        top: 155px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+
+
+      .content {
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        width:85%;
+        height: 620px;
+
+      }
+      .content li {
+        width:450px;
+        height: 620px;
+        margin-right: 32.6px;
+        float: left;
+        cursor: pointer;
+      }
+
+
+      .content .card3{
+        margin-right: 0;
+
+      }
+      .card1 {
+        background: url("./img/season/s1.png")
+      }
+      .card2 {
+        background: url("./img/season/s2.png")
+      }
+      .card3 {
+        background: url("./img/season/s3.png")
+      }
+
+      .card1:hover {
+          transition: 0.5s;
+        background: url("./img/season/s1_on.png")
+      }
+      .card2:hover {
+        transition: 0.5s;
+        background: url("./img/season/s2_on.png")
+      }
+      .card3:hover {
+        transition: 0.5s;
+        background: url("./img/season/s3_on.png")
+      }
+
+      </style>
+  </head>
+  <body>
+    <!-- 팝업 -->
+
+    <section id="card1_pop">
+      <div class="title">SEASON 1</div>
+      <div class="say">“어떤 인간의 욕망도 절대 충족되지 않는다. <br>
+        인간은 더 많은 것을 갖기 위해 <br>
+         끝없이 오르려 하기 때문이다!”
+      </div>
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>방송기간</strong>
+            <span>시즌1 2020년 10월 26일 - 2021년 01월 05일 (월,화)</span>
+          </li>
+          <li>
+            <strong>제작사</strong>
+            <span>초록뱀미디어</span>
+          </li>
+          <li>
+            <strong>연출</strong>
+            <span>주동민</span>
+          </li>
+          <li>
+            <strong>극본</strong>
+            <span>김순옥</span>
+          </li>
+          <li>
+            <strong>출연</strong>
+            <span>이지아, 김소연, 유진 등</span>
+          </li>
+        </ul>
+
+        <div class="movie_wrap">
+            <video id="season1" src="video1.mp4" width="800px"></video>
+            <div class="play"><img class="season1_btn" src="./img/season/play.png" alt="play"></div>
+            <div class="stop"><img class="season1_pause" src="./img/season/pause.png" alt="pause"></div>
+        <div>
+
+
+    </section>
+
+    <section id="card2_pop">
+      <div class="title">SEASON 2</div>
+      <div class="say">채워질 수 없는 일그러진 욕망으로 <br>
+      자식을 지키기 위해 악녀가 될 수밖에 없었던 <br>
+      여자들의 연대와 복수를 그린 이야기!
+      </div>
+        <div class="previewCut_close"><img src="./img/season/previewCut_close.png" alt="닫힘"></div>
+
+        <ul>
+          <li>
+            <strong>방송기간</strong>
+            <span>시즌2 2021년 02월 19일 ~ 2021년 04월 02일 (금,토)</span>
+          </li>
+          <li>
+            <strong>제작사</strong>
+            <span>초록뱀미디어</span>
+          </li>
+          <li>
+            <strong>연출</strong>
+            <span>주동민</span>
+          </li>
+          <li>
+            <strong>극본</strong>
+            <span>김순옥</span>
+          </li>
+          <li>
+            <strong>출연</strong>
+            <span>이지아, 김소연, 유진 등</span>
+          </li>
+        </ul>
+
+        <div class="movie_wrap">
+            <video id="season2" src="video2.mp4" width="800px"></video>
+            <div class="play"><img class="season2_btn" src="./img/season/play.png" alt="play"></div>
+            <div class="stop"><img class="season2_pause" src="./img/season/pause.png" alt="pause"></div>
+        <div>
+
+
+    </section>
+    </section>
+
+
+
+    <a name='navigation'>
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="./img/main/logo.png" alt="메인"></a></h1>
+
+        <nav id="topMenu">
+          <ul>
+            <li class='topMenuLi'><a class="menuLink" href="video.html">영상</a>
+
+            </li>
+              <li class='topMenuLi'><a class="menuLink" href="gallery1.html">갤러리</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="cast.html">등장인물</a>
+
+              </li>
+              <li class='topMenuLi'><a class="menuLink" href="season.html">시즌</a>
+
+          </ul>
+        </nav>
+
+
+
+        <ul class="bottom_list"></ul>
+    </header>
+    <h1>SEASON</h1>
+    <h2>카드를 클릭해보세요</h2>
+    <ul class="content">
+      <li class="card1"></li>
+      <li class="card2"></li>
+      <li class="card3"></li>
+    </ul>
+
+  </body>
+</html>
